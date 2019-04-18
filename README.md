@@ -1,2 +1,4 @@
-# eicug.org
-Configuration and maintenance documents for the eicug.org site
+# Configuration and maintenance instructions for the eicug.org site
+
+Work in progress
+
