@@ -1,0 +1,13 @@
+mv  includes/ ~/my_includes
+cp -r ~/drupal-7.65 new_web
+cd new_web/
+rm -fr sites
+cp -r ../web/sites .
+cp ../web/robots.txt .
+diff ../web/robots.txt robots.txt 
+cp ../web/.htaccess .
+diff ../web/.htaccess .htaccess 
+cd ..
+mv web old_web
+mv new_web/ web
+cp -r old_web/themes/business_responsive_theme/ web/themes/
