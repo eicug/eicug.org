@@ -1,0 +1,47 @@
+[29-Nov-2015 20:07:08 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:07:09 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:07:09 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:07:09 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:08:02 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:08:02 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:08:02 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:08:02 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:08:21 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:08:22 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:08:22 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:08:22 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:09:51 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:09:51 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:09:51 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:09:51 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:37:52 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:37:52 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:37:52 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:37:52 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:38:04 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[29-Nov-2015 20:38:04 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:38:04 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:38:04 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:55:29 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/institutions.list.php on line 45
+[29-Nov-2015 20:55:29 America/Denver] PHP Notice:  Undefined index: last_update in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 59
+[29-Nov-2015 20:55:29 America/Denver] PHP Notice:  Undefined variable: institution_id in /home3/eicugorg/public_html/pnb/service/handlers/members.list.php on line 87
+[29-Nov-2015 20:55:29 America/Denver] PHP Notice:  Undefined index: params in /home3/eicugorg/public_html/pnb/service/include/ServiceController.class.php on line 13
+[02-Nov-2017 14:41:34 America/Denver] PHP Warning:  mysql_connect(): Too many connections in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[02-Nov-2017 14:41:34 America/Denver] PHP Warning:  mysql_connect(): Too many connections in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[02-Nov-2017 14:41:34 America/Denver] PHP Warning:  mysql_connect(): Too many connections in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[02-Nov-2017 14:41:34 America/Denver] PHP Warning:  mysql_connect(): Too many connections in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[28-Dec-2017 04:06:23 America/Denver] PHP Warning:  mysql_connect(): Too many connections in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  Non-static method ServiceConfig::Instance() should not be called statically, assuming $this from incompatible context in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 44
+[23-Oct-2018 06:30:27 America/Denver] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home3/eicugorg/public_html/pnb/service/include/ServiceDb.class.php on line 30

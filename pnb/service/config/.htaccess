@@ -1,0 +1,7 @@
+# Begin password protection #
+AuthName "security authorization"
+Require valid-user
+AuthUserFile "/home/users/web/b822/ipg.quintaplustechcom/eic-ug/pnb/service/config/.htpasswd"
+AuthType basic
+# End password protection #
+
