@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>EIC Institutions</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000000 url(loading.gif) center center no-repeat;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+        height: 100%;
+      }
+
+      #info {
+
+        font-size: 11px;
+        position: absolute;
+        bottom: 5px;
+        background-color: rgba(0,0,0,0.8);
+        border-radius: 3px;
+        right: 10px;
+        padding: 10px;
+
+      }
+
+      #currentInfo {
+        width: 270px;
+        position: absolute;
+        left: 20px;
+        top: 63px;
+
+        background-color: rgba(0,0,0,0.2);
+
+        border-top: 1px solid rgba(255,255,255,0.4);
+        padding: 10px;
+      }
+
+      a {
+        color: #aaa;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .bull {
+        padding: 0 5px;
+        color: #555;
+      }
+
+      #title {
+        position: absolute;
+        top: 20px;
+        width: 270px;
+        left: 20px;
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 3px;
+        font: 20px Georgia;
+        padding: 10px;
+      }
+
+      .year {
+        font: 16px Georgia;
+        line-height: 26px;
+        height: 30px;
+        text-align: center;
+        float: left;
+        width: 90px;
+        color: rgba(255, 255, 255, 0.4);
+
+        cursor: pointer;
+        -webkit-transition: all 0.1s ease-out;
+      }
+
+      .year:hover, .year.active {
+        font-size: 23px;
+        color: #fff;
+      }
+
+      #ce span {
+        display: none;
+      }
+
+      #ce {
+        width: 107px;
+        height: 55px;
+        display: block;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        background: url(/globe/ce.png);
+      }
+	  #starinfo {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		border: 1px solid #999;
+		padding: 10px;
+		font-family: verdana, arial;
+		font-size: 16px;
+		z-index: 100;
+		color: #FFF;
+	  }
+
+
+    </style>
+  </head>
+  <body>
+
+  <div id="container"></div>
+  <div id="starinfo"></div>
+
+  <script type="text/javascript" src="third-party/Detector.js"></script>
+  <script type="text/javascript" src="third-party/three.min.js"></script>
+  <script type="text/javascript" src="third-party/Tween.js"></script>
+  <script type="text/javascript" src="globe.js"></script>
+  <script type="text/javascript">
+
+    if(!Detector.webgl){
+      Detector.addGetWebGLMessage();
+    } else {
+
+      var container = document.getElementById('container');
+      var globe = new DAT.Globe(container);
+
+      var i, tweens = [];
+      
+      var settime = function(globe, t) {
+        return function() {
+          new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+        };
+      };
+            
+
+      var counts;
+      var xhr;
+      TWEEN.start();
+
+      xhr = new XMLHttpRequest();
+
+      xhr.open('GET', 'http://www.eicug.org/pnb/service/index.php/?q=/members/count', false);
+      xhr.onreadystatechange = function(e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            counts = JSON.parse(xhr.responseText);
+          }
+        }
+      };
+      xhr.send(null);
+
+      xhr.open('GET', 'http://www.eicug.org/pnb/service/index.php/?q=/institutions/list/status:active', true);
+      xhr.onreadystatechange = function(e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText);
+            window.data = data;
+            var pts = [];
+			var inst = 0, mem = 0;
+            for (var k in data) {
+              if (data[k]['fields'][43] == undefined) { continue; }
+              pts.push(data[k]['fields'][43]);
+              pts.push(data[k]['fields'][44]);
+              //pts.push( (1 - ( counts.max - counts.data[k] ) / counts.max ) / 2. );
+              pts.push( Math.log( counts.data[k] ) / 7.0 );
+			  inst += 1;
+			  if (counts.data[k] != undefined) {
+				mem += counts.data[k];
+			  }
+            }
+            globe.addData(pts, {format: 'magnitude', name: 'Electron-Ion Collider Institutions', animated: true});
+            globe.createPoints();
+            settime(globe,0)();
+            globe.animate();
+            document.body.style.backgroundImage = 'none'; // remove loading
+			document.getElementById('starinfo').innerHTML = '<b>Electron-Ion Collider User Group</b> - Institutions: <b>' + inst + '</b>, Members: <b>' + mem +'</b>';
+          }
+        }
+      };
+      xhr.send(null);
+    }
+  </script>
+  </body>
+</html>
