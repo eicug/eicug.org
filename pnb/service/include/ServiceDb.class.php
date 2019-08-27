@@ -26,43 +26,55 @@ class ServiceDb {
         return $instance[$domain];
     }
 
-	function Init($dsn, $user, $pass) {
-		$this->db = mysql_connect($dsn, $user, $pass);
+    // -mxp-
+    function Init($dsn, $user, $pass, $database) {
+	  //	function Init($dsn, $user, $pass) {
+
+	  // -mxp-
+	  //		$this->db = mysql_connect($dsn, $user, $pass);
+      $this->db = mysqli_connect($dsn, $user, $pass, $database);
 		if (!$this->db) {
-    		    echo 'Could not connect: ' . mysql_error();
-				return;
+		  echo 'Could not connect: ' . mysqli_error();
+		  return;
 		}
-		mysql_query('SET character_set_results=utf8');
-		mysql_query('SET names=utf8');
-		mysql_query('SET character_set_client=utf8');
-		mysql_query('SET character_set_connection=utf8');
-		mysql_query('SET character_set_results=utf8');
-		mysql_query('SET collation_connection=utf8_general_ci');
+		// -mxp- msqli
+		mysqli_query('SET character_set_results=utf8');
+		mysqli_query('SET names=utf8');
+		mysqli_query('SET character_set_client=utf8');
+		mysqli_query('SET character_set_connection=utf8');
+		mysqli_query('SET character_set_results=utf8');
+		mysqli_query('SET collation_connection=utf8_general_ci');
 	}
 
 	function InitFromConfig($cfg_name) {
 		$cfg =& ServiceConfig::Instance($cfg_name);
 		$this->Init($cfg->Get($cfg_name,'host').':'.$cfg->Get($cfg_name,'port'),
-					$cfg->Get($cfg_name,'user'),
-					$cfg->Get($cfg_name,'password'));
+			    $cfg->Get($cfg_name,'user'),
+			    $cfg->Get($cfg_name,'password'),
+			    $cfg->Get($cfg_name,'database')); // -mxp-
 	}
 
 	function SelectDB($name) {
-	    mysql_select_db($name, $this->db);
+	  // mysql_select_db($name, $this->db);
 	}
 
 	function Query($sql) {
-		$result = @mysql_query($sql, $this->db);
-		$error = mysql_error();
-		if (!$result) {
-		  if (!strpos(strtolower($error), "doesn't exist") && !strpos(strtolower($error), "nknown column")) {
+	  // -mxp-
+	  //		$result = @mysql_query($sql, $this->db);
+	  $result = mysqli_query($this->db, $sql);
+	  $error = mysqli_error($this->db);
+	  //		$error = mysql_error();
+	  if (!$result) {
+	    if (!strpos(strtolower($error), "doesn't exist") && !strpos(strtolower($error), "unknown column")) {
 		    //print_r($error);
   		    //echo 'Invalid query: ' . $error;
 		    //echo "\n Query was: ".$sql.'<BR><BR>';
 		  }
 		} else {
 		$rows = array();
-		while ($row = @mysql_fetch_assoc($result)) {
+		// -mxp-
+		//		while ($row = @mysql_fetch_assoc($result)) {
+		while ($row = mysqli_fetch_assoc($result)) {
 			if (is_array($row) && count($row) == 1) {
 				$keys = array_keys($row);
 				$rows[$keys[0]][] = $row[$keys[0]];
@@ -91,7 +103,9 @@ class ServiceDb {
 
 	function Close() {
 		if (isset($this->db)) {
-			@mysql_close($this->db);
+		  // -mxp-
+		  //			@mysql_close($this->db);
+			mysqli_close($this->db);
 			unset($this->db);
 		}
 	}
