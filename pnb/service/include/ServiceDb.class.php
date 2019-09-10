@@ -96,7 +96,7 @@ class ServiceDb {
 
 	function LastID() {
 		if (isset($this->db)) {
-			return mysql_insert_id($this->db);
+			return mysqli_insert_id($this->db);
 		}
 		return NULL;
 	}
@@ -112,7 +112,7 @@ class ServiceDb {
 
 	function Escape($query) {
 	    if (isset($this->db)) {
-		return mysql_real_escape_string($query, $this->db);
+	      return mysqli_real_escape_string($this->db, $query);
 	    }
 	    return NULL;
 	}
