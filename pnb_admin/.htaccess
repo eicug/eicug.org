@@ -1,0 +1,7 @@
+# Begin password protection #
+AuthName "EIC PhoneBook Admin"
+Require valid-user
+AuthUserFile "/home/eicugorg/.htpasswds/.pnb-admin-htpasswd"
+AuthType basic
+# End password protection #
+

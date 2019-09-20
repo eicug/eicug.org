@@ -1,0 +1,137 @@
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(fonts/oswald.woff) format('woff');
+}
+
+body, html {
+	font-family: verdana, arial, helvetica;
+	font-size: 14px;
+}
+
+.ui-layout-south {
+	text-align: center;
+}
+
+.menu {
+    margin: 10px !important;
+	font-size: 14px;
+}
+
+table tr td {
+	font-size: 12px;
+}
+
+h3 {
+    margin: 0;
+    padding: 7px;
+    text-align: center;
+	font-size: 20px;
+}
+
+h4 {
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+}
+
+.ui-layout-pane {
+    padding: 0 !important;
+}
+
+.css_right {
+	float: right;
+}
+
+
+
+tbody tr.even:hover, tbody tr.even td.highlighted {
+	background-color: yellow;
+}
+
+tbody tr.odd:hover, tbody tr.odd td.highlighted {
+	background-color: yellow;
+}
+
+tbody tr.even:hover td.sorting_1, tbody tr.even:hover td.sorting_1 {
+	background-color: yellow;
+}
+
+tbody tr.even:hover td.sorting_2, tbody tr.even:hover td.sorting_2 {
+	background-color: yellow;
+}
+
+tbody tr.even:hover td.sorting_3, tbody tr.even:hover td.sorting_3 {
+	background-color: yellow;
+}
+
+tbody tr.odd:hover td.sorting_1, tbody tr.odd:hover td.sorting_1 {
+	background-color: yellow;
+}
+
+tbody tr.odd:hover td.sorting_2, tbody tr.odd:hover td.sorting_2 {
+	background-color: yellow;
+}
+
+tbody tr.odd:hover td.sorting_3, tbody tr.odd:hover td.sorting_3 {
+	background-color: yellow;
+}
+
+.td_align_center {
+	text-align: center;
+}
+.td_align_right {
+	text-align: right;
+}
+.td_align_left {
+	text-align: left;
+}
+
+.ui-autocomplete-loading {
+	background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+
+#tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+	height: 200px;
+}
+
+h2 {
+	display: block;
+	text-align: left;
+	color: white;
+	text-shadow: 2px 2px #777;
+	box-shadow: 2px 2px #777;
+	padding: 5px;
+	font-size: 16px;
+	font-family: arial, verdana, helvetica;
+	background-color: #8fb9cb;
+}
+
+.ui-autocomplete {
+	z-index: 1000
+}
+
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}
+
+.no-close .ui-dialog-titlebar-close {
+	display: none;
+}
