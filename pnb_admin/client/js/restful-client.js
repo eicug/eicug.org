@@ -3350,8 +3350,10 @@ RCLIENT.Phonebook.prototype = {
 		var service = this;
 		var header = [ {"bVisible": false}, {"sTitle": this.institutions_fields["1"]["name_desc"]}, 
 			{"sTitle":this.institutions_fields["2"]["name_desc"], "sClass": "td_align_center"}, 
+			{"sTitle":this.institutions_fields["41"]["name_desc"], "sClass": "td_align_center"}, 
 			//{"sTitle":this.institutions_fields["3"]["name_desc"], "sClass": "td_align_right"}, 
-			{"sTitle":this.institutions_fields["14"]["name_desc"]}, {"sTitle":this.institutions_fields["40"]["name_desc"], "sClass": "td_align_center"}
+			{"sTitle":this.institutions_fields["14"]["name_desc"]},
+			{"sTitle":this.institutions_fields["40"]["name_desc"], "sClass": "td_align_center"}
 			//{"sTitle": "Status","sClass": "td_align_center"}
 			];
 		var data = [];
@@ -3371,8 +3373,9 @@ RCLIENT.Phonebook.prototype = {
 			var name_short = '';
 			var name_group = '';
 			if (field[2] != undefined) { name_short = field[2]; }
+			if (field[41] != undefined) { join_date = field[41]; }
 			if (field[3] != undefined) { name_group = field[3]; }
-			data.push([ i, field[1], name_short, country, region ]);
+			data.push([ i, field[1], name_short, join_date, country, region ]);
 		}
 		var label = 'Institutions';
 		var tabid = service.addTab(label);
